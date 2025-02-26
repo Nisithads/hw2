@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #2d3436;
+    --accent-color: #00b894;
+    --bg-color: #f8f9fa;
+    --text-color: #2d3436;
+    --section-bg: #ffffff;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-1px);
+}
+
+/* Content styling */
+main {
+    flex: 1 0 auto;
+}
+
+.content-section {
+    background: var(--section-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+}
+
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+a:not(.nav-link):not(.navbar-brand) {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a:not(.nav-link):not(.navbar-brand):hover {
+    color: #008b6e;
+    text-decoration: underline;
+}
+
+.img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+ul li {
+    padding: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
